@@ -2,7 +2,7 @@
 /*
 Plugin Name: FCP List Posts
 Description: Use shortcode to add a list of posts, specify by post-type, order, meta and template
-Version: 1.0.0
+Version: 1.2.0
 Requires at least: 4.7
 Requires PHP: 7.0.0
 Author: Firmcatalyst, Vadim Volkov
