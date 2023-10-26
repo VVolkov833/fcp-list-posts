@@ -2,7 +2,7 @@
 /*
 Plugin Name: FCP List Posts
 Description: Use shortcode to add a list of posts, specify by post-type, order, meta and template
-Version: 1.2.0
+Version: 1.2.1
 Requires at least: 4.7
 Requires PHP: 7.0.0
 Author: Firmcatalyst, Vadim Volkov
@@ -11,6 +11,7 @@ License: GPL v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: fcplp
 Domain Path: /languages
+GitHub Plugin URI: https://github.com/VVolkov833/fcp-list-posts
 */
 
 defined( 'ABSPATH' ) || exit;
