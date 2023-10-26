@@ -1,0 +1,210 @@
+.fcp-list-clinic-x3.wrap-width,
+.wrap-width .fcp-list-clinic-x3 {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:0;
+}
+
+.fcp-list-clinic-x3 article {
+    --per:1;
+    --gap:30px;
+    width:calc((100% - (var(--gap) * (var(--per) - 1))) / var(--per));
+    min-height:0;
+    margin-left:var(--gap);
+    margin-bottom:20px;
+}
+
+@media (max-width:499px) {
+    .fcp-list-clinic-x3 article { margin-left:0; }
+}
+@media (min-width:500px) and (max-width:991px) {
+    .fcp-list-clinic-x3 article { --per:2; --gap:20px; }
+    .fcp-list-clinic-x3 article:nth-child(2n+1) { margin-left:0px; }
+}
+@media (min-width:992px) and (max-width:1199px) {
+    .fcp-list-clinic-x3 article { --per:3; --gap:20px; }
+    .fcp-list-clinic-x3 article:nth-child(3n+1) { margin-left:0px; }
+}
+@media (min-width:1200px) {
+    .fcp-list-clinic-x3 article { --per:3; }
+    .fcp-list-clinic-x3 article:nth-child(3n+1) { margin-left:0px; }
+}
+
+
+
+.fcp-list-clinic-x3 article {
+    display:flex;
+    flex-direction:column;
+    position:relative;
+    border-radius:6px;
+    overflow:hidden;
+    background:linear-gradient(90deg, #d3d7da 50%, #a3a7aa 90%);
+}
+
+
+.fcp-list-clinic-x3 .entry-header {
+    margin:0;
+    padding:48px 20px;
+    flex:1;
+    position:relative;
+}
+.fcp-list-clinic-x3 .entry-header > * {
+    position:relative;
+}
+
+.fcp-list-clinic-x3 .entry-badges {
+    position:absolute;
+    top:0;
+    z-index:5;
+}
+
+.fcp-list-clinic-x3 .entry-badges > * {
+    display:inline-block;
+    width:20px;
+    height:33px;
+    background-color:var(--a-color);
+    mask-repeat:no-repeat;
+    -webkit-mask-repeat:no-repeat;
+    mask-position:0 0;
+    -webkit-mask-position:0 0;
+    mask-size:100%;
+    -webkit-mask-size:100%;
+    mask-image:var(--badge);
+    -webkit-mask-image:var(--badge);
+    --badge:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 82 135' version='1.1'%3E%3Cpath stroke='none' fill='%23ddd' d='m 0,0 v 134.5 L 41,93.5 82,134.5 V 0 Z'/%3E%3C/svg%3E%0A");
+}
+.fcp-list-clinic-x3 .entry-badges > *::after {
+    content:'';
+    display:block;
+    width:100%;
+    height:100%;
+    background-repeat:no-repeat;
+    background-size:60% auto;
+    background-position:center 28%;
+}
+.fcp-list-clinic-x3 .entry-verified::after {
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' version='1.1'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='9' d='M 4,21 19,37 46,9'/%3E%3C/svg%3E");    
+}
+.fcp-list-clinic-x3 .entry-featured::after {
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50' version='1.1'%3E%3Cpath stroke='none' fill='%23fff' d='M 2,20 18,18 25,3 32,18 48,20 36,31 39,47 25,39 10,47 14,31 Z'/%3E%3C/svg%3E%0A");
+}
+
+
+.fcp-list-clinic-x3 .entry-header .entry-photo {
+    position:absolute;
+    right:0;
+    top:0;
+    z-index:1;
+    width:58%;
+    height:100%;
+}
+.fcp-list-clinic-x3 .entry-header .entry-photo::before {
+    content:'';
+    position:absolute;
+    left:-1px;
+    top:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(90deg, #d3d7da 2%, #d3d7da00 55%);
+}
+
+.fcp-list-clinic-x3 .entry-photo img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center top;
+}
+
+.fcp-list-clinic-x3 .entry-header .entry-photo.entry-background {
+    width:100%;
+}
+.fcp-list-clinic-x3 .entry-header .entry-photo.entry-background::before {
+    background:linear-gradient(90deg, #d3d7daff 6%, #d3d7da00 100%);
+}
+
+.fcp-list-clinic-x3 article h2 {
+    display:flex;
+    align-items:center;
+    height:100%;
+    max-width:65%;
+    margin:0;
+    z-index:3;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+}
+.fcp-list-clinic-x3 article h2 > a {
+    color:var(--h-color);
+    text-decoration:none;
+}
+
+.fcp-list-clinic-x3 .entry-details {
+    display:flex;
+    align-items:center;
+    padding:10px;
+    box-sizing:border-box;
+    background-color:#d3d7da;
+    flex-basis:70px;
+}
+
+.fcp-list-clinic-x3 .entity-avatar {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:80px;
+    height:50px;
+    padding:2px;
+    border:1px solid #ffffff75;
+    border-radius:6px;
+    background-color:#fff;
+    box-sizing:border-box;
+}
+.fcp-list-clinic-x3 .entity-avatar img {
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    object-position:center;
+}
+
+.fcp-list-clinic-x3 .entity-about {
+    flex:1;
+    padding-left:12px;
+}
+.fcp-list-clinic-x3 .entity-about > p {
+    margin:0;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:0.2px;
+}
+
+.fcp-list-clinic-x3 .entity-about .cr_rating_bar {
+    width:50%;
+    max-width:115px;
+    margin-top:8px;
+}
+
+.fcp-list-clinic-x3 .entry-link-cover {
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index:4;
+}
+
+/* hover */
+.fcp-list-clinic-x3 article {
+    transition:box-shadow .2s ease-out;
+}
+.fcp-list-clinic-x3 article:hover {
+    box-shadow: 2px 3px 11px -2px #00000099;
+}
+
+/* stars */
+.entity-about .cr_stars_bar {
+    width:50%;
+    max-width:115px;
+    margin-top:8px;
+}
